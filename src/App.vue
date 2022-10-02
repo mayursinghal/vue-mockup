@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div :class="colorTheme" class="fullHeight">
+    <NavbarVue @changeTheme="changeTheme"/>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import NavbarVue from './components/Navbar.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    NavbarVue
+  },
+  data() {
+        return {
+            colorTheme: "light"
+        }
+    },
+    methods:{
+      changeTheme(updatedColor){
+        this.colorTheme = updatedColor
+        console.log(this.colorTheme)
+      }
+    }
 }
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .light{
+    background-color: white;
+  }
+  .dark{
+    background-color: black;
+  }
+ 
 </style>
+

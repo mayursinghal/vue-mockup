@@ -53,6 +53,8 @@ header {
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    position: sticky;
+    top: 0
 
 }
 

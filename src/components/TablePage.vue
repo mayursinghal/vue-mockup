@@ -49,13 +49,13 @@ table {
 }
 .sticky th{
     position: sticky;
-    top:-1px;
+    top:12%;
 }
 .light .sticky th{
     background-color: white;
 }
 .dark .sticky th{
-    background-color: #212121;
+    background-color: #424242;
 }
 .dark td{
     border-color: black !important;
@@ -88,7 +88,7 @@ th {
     background-color: white;
 }
 .dark tr:nth-child(odd) {
-    background-color: #212121;
+    background-color: #424242;
 }
 
 

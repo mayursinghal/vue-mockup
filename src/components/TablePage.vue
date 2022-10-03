@@ -1,8 +1,8 @@
 <template>
     <div class="loading" v-if="loading">Loading ...</div>
     <div v-else>
-        <table>
-            <tr class="fixed">
+        <table class="sticky">
+            <tr>
                 <th>Name</th>
                 <th>Description</th>
                 <th>Category</th>
@@ -47,6 +47,16 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
+.sticky th{
+    position: sticky;
+    top:-1px;
+}
+.light .sticky th{
+    background-color: white;
+}
+.dark .sticky th{
+    background-color: #212121;
+}
 .dark td{
     border-color: black !important;
     color: white;
@@ -65,8 +75,7 @@ th {
     border: 1px solid #dddddd;
     text-align: center;
     padding: 18px;
-    position: sticky;
-    z-index: 1;
+   
 }
 
 .light tr:nth-child(even) {

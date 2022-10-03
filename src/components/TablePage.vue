@@ -32,12 +32,11 @@ export default {
     },
     methods:{
         async loadData(){
-            console.log(this.loading)
             await this.$store.dispatch("loadContent")
 
             this.content = this.$store.getters["data"]
             this.loading = false
-            console.log(this.loading)
+            
         }
     }
 }
@@ -67,6 +66,7 @@ th {
     text-align: center;
     padding: 18px;
     position: sticky;
+    z-index: 1;
 }
 
 .light tr:nth-child(even) {

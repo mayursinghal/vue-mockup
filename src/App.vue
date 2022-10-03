@@ -20,7 +20,6 @@ export default {
     methods:{
       changeTheme(updatedColor){
         this.colorTheme = updatedColor
-        console.log(this.colorTheme)
       }
     }
 }
